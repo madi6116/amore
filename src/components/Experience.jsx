@@ -1,7 +1,7 @@
 const pillars = [
   {
     title: 'Personal',
-    description: 'A celebration shaped around your story — not a formula.',
+    description: 'A celebration shaped around your story, not a formula.',
   },
   {
     title: 'Polished',
