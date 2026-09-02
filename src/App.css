@@ -1,20 +1,5 @@
-/* ---------------------------------------------------------- */
-/* THEME TOKENS                                                */
-/* ---------------------------------------------------------- */
 
-.site[data-theme='ivory'] {
-  --bg: #faf6ef;
-  --bg-panel: #f1e9dc;
-  --text: #2e4152;
-  --text-soft: #5b7186;
-  --accent: #cdeeff;
-  --accent-deep: #33506d;
-  --card-bg: #ffffff;
-  --border: #e2d8c6;
-  --btn-text: #2e4152;
-}
-
-.site[data-theme='blue'] {
+.site {
   --bg: #cdeeff;
   --bg-panel: #b8e2f8;
   --text: #2e4152;
@@ -24,12 +9,9 @@
   --card-bg: #ffffff;
   --border: rgba(46, 65, 82, 0.18);
   --btn-text: #cdeeff;
-}
 
-.site {
   background: var(--bg);
   color: var(--text);
-  transition: background 0.3s ease, color 0.3s ease;
   overflow-x: hidden;
 }
 
@@ -63,38 +45,7 @@
   color: var(--btn-text);
 }
 
-/* ---------------------------------------------------------- */
-/* THEME SWITCHER (preview tool only)                          */
-/* ---------------------------------------------------------- */
 
-.theme-switcher {
-  position: fixed;
-  top: 14px;
-  right: 14px;
-  z-index: 100;
-  display: flex;
-  gap: 4px;
-  background: rgba(0, 0, 0, 0.55);
-  padding: 4px;
-  border-radius: 999px;
-}
-
-.theme-switcher button {
-  border: none;
-  background: transparent;
-  color: #fff;
-  font-family: 'Jost', sans-serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.4rem 0.9rem;
-  border-radius: 999px;
-}
-
-.theme-switcher button.active {
-  background: #fff;
-  color: #222;
-}
 
 /* ---------------------------------------------------------- */
 /* NAVBAR                                                       */
