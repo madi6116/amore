@@ -1,22 +1,16 @@
-const services = [
-  {
-    title: 'Wedding Planning',
-    description:
-      'Full-service wedding planning tailored to your style, culture, and vision. We handle every detail so you can cherish every moment.',
-  },
-  {
-    title: 'Specialty Events',
-    description:
-      'From milestone celebrations to corporate soirées, we create bespoke events that inspire and delight your guests.',
-  },
-  {
-    title: 'Travel Consultation',
-    description:
-      'Dreaming of a destination wedding or event? We offer expert guidance to make your travel experience seamless and unforgettable.',
-  },
-]
+import { useEffect, useState } from 'react'
+import { client } from '../sanityclient'
 
 function Services() {
+  const [services, setServices] = useState([])
+
+  useEffect(() => {
+    client
+      .fetch(`*[_type == "service"] | order(order asc){title, description}`)
+      .then(setServices)
+      .catch(console.error)
+  }, [])
+
   return (
     <section className="services" id="services">
       <p className="eyebrow">What We Offer</p>
